@@ -6,10 +6,13 @@ module.exports = {
 
     if(geojson.geometry.type = 'Polygon'){
       _.each(geojson.geometry.coordinates, function(ring, i){
-        // add outer ring clockwise
+        // push array for new ring
+        clipsy.push([])
+
         if(i === 0){
-          _.each(ring, function(pair, i){
-            
+          // add outer ring clockwise
+          _.each(ring, function(pair){
+            clipsy[i].push({X: pair[0], Y: pair[1]})
           })
         }
         else{

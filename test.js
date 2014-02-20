@@ -33,7 +33,7 @@ var geojson = {
   }
 }
 
-var clipsy = [[{X:-85.53508758544922,Y:33.28777693677941},{X:-85.53508758544922,Y:33.32751625923708},{X:-85.43895721435547,Y:33.32751625923708},{X:-85.43895721435547,Y:33.28777693677941}]];
+var clipsy = [[{X:-85535087585449,Y:33287776936779},{X:-85535087585449,Y:33327516259237},{X:-85438957214355,Y:33327516259237},{X:-85438957214355,Y:33287776936779}]];
 
 describe('clipsy-geojson', function(){
   describe('toClipsy()', function(){
@@ -44,10 +44,10 @@ describe('clipsy-geojson', function(){
     })
   })
   describe('toGeojson()', function(){
-    xit('should take a clipsy path array and return the equivalent geojson featurecollection', function(){
+    it('should take a clipsy path array and return the equivalent geojson featurecollection', function(){
       var res = cg.toGeojson(clipsy)
       res.should.be.ok
-      res.features[0].should.be.ok
+      res.geometry.coordinates[0][0].should.be.ok
     })
   })
 })

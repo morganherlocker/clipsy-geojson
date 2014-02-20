@@ -1,7 +1,7 @@
 clipsy-geojson
 ==============
 
-conversion module for clipsy and geojson
+**conversion module for clipsy and geojson**
 
 ###install
 

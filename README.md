@@ -23,7 +23,7 @@ var cg = require('clipsy-geojson')
 var geojsonData = {
   type: 'FeatureCollection',
   features: [
-    // collection of polygon features
+    // array of polygon features
   ]
 }
 

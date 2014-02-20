@@ -21,10 +21,35 @@ npm test
 var cg = require('clipsy-geojson')
 
 var geojsonData = {
-  type: 'FeatureCollection',
-  features: [
-    // array of polygon features
-  ]
+  "type": "Feature",
+  "properties": {},
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -85.53508758544922,
+          33.28777693677941
+        ],
+        [
+          -85.53508758544922,
+          33.32751625923708
+        ],
+        [
+          -85.43895721435547,
+          33.32751625923708
+        ],
+        [
+          -85.43895721435547,
+          33.28777693677941
+        ],
+        [
+          -85.53508758544922,
+          33.28777693677941
+        ]
+      ]
+    ]
+  }
 }
 
 //convert to clipsy

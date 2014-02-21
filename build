@@ -1,0 +1,5 @@
+echo browserifying..
+browserify index.js > clipsy-geojson.js -s clipsy
+echo uglifying..
+uglifyjs index.js -o clipsy-geojson.min.js
+echo ..complete

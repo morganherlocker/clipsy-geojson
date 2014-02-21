@@ -1,6 +1,6 @@
 {
   "name": "clipsy-geojson",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "conversion module for clipsy and geojson",
   "main": "index.js",
   "scripts": {

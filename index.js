@@ -23,6 +23,9 @@ module.exports = {
         }
       })
     }
+    else if(geojson.geometry.type = 'MultiPolygon'){
+      
+    }
     return clipsy
   },
   toGeojson: function(clipsy) {

@@ -3,7 +3,8 @@ var _ = require('lodash')
 module.exports = {
   toClipsy: function(geojson) {
     var clipsy = []
-    if(geojson.geometry.type = 'Polygon'){
+
+    if(geojson.geometry.type === 'Polygon'){
       _.each(geojson.geometry.coordinates, function(ring, i){
         // push array for new ring
         clipsy.push([])
@@ -22,27 +23,25 @@ module.exports = {
         }
       })
     }
-    if(geojson.geometry.type = 'MultiPolygon'){
-      console.log(geojson.geometry.coordinates.length)
+    if(geojson.geometry.type === 'MultiPolygon'){
+      var ringIteration = 0
       _.each(geojson.geometry.coordinates, function(poly, k){
         _.each(poly, function(ring, i){
-          console.log('!!!!!!!')
           // push array for new ring
           clipsy.push([])
           if(i === 0){
             // add outer ring clockwise
             _.each(ring, function(pair){
-              console.log(pair)
-              clipsy[i].push({X: scale(pair[0]), Y: scale(pair[1])})
+              clipsy[ringIteration].push({X: scale(pair[0]), Y: scale(pair[1])})
             })
           }
           else{
-            console.log('hole detected')
             // add pairs counterclockwise
-            _.each(ring, function(pair, i){
-
+            _.each(ring, function(pair){
+              clipsy[ringIteration].push({X: scale(pair[0]), Y: scale(pair[1])})
             })
           }
+          ringIteration++
         })
       })
     }

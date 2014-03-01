@@ -55,14 +55,14 @@ var clipsy = [[{X:-85535087585449,Y:33287776936779},{X:-85535087585449,Y:3332751
 
 describe('clipsy-geojson', function(){
   describe('toClipsy()', function(){
-    xit('should take a geojson Polygon and return the equivalent clipsy paths', function(){
+    it('should take a geojson Polygon and return the equivalent clipsy paths', function(){
       var res = cg.toClipsy(geojsonPolygon)
       res.should.be.ok
       res[0][0].X.should.be.ok
     })
   })
   describe('toGeojson()', function(){
-    xit('should take a clipsy path array and return the equivalent geojson Polygon', function(){
+    it('should take a clipsy path array and return the equivalent geojson Polygon', function(){
       var res = cg.toGeojson(clipsy)
       res.should.be.ok
       res.geometry.coordinates[0][0].should.be.ok

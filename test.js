@@ -74,10 +74,13 @@ describe('clipsy-geojson', function(){
       res.should.be.ok
       res[0][0].X.should.be.ok
       res[1][0].X.should.be.ok
+      //console.log(JSON.stringify(res))
     })
   })
 })
 
+// definitely working poly:
+//[[{"X":100,"Y":100},{"X":200,"Y":100},{"X":200,"Y":200},{"X":100,"Y":200}],[{"X":110,"Y":110},{"X":210,"Y":110},{"X":210,"Y":210},{"X":110,"Y":210}]]
 
 
 

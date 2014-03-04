@@ -1,6 +1,8 @@
 clipsy-geojson
 ==============
 
+[![Build Status](https://travis-ci.org/morganherlocker/clipsy-geojson.png?branch=master)](https://travis-ci.org/morganherlocker/clipsy-geojson)
+
 **conversion module for clipsy and geojson**
 
 ###install
